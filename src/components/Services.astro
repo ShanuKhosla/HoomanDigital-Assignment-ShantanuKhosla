@@ -1,0 +1,16 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import {getCollection} from "astro:content";
+import ServiceList from "./ServiceList.astro";
+const services = await getCollection("services");
+
+
+---
+
+<section class="max-sm:px-8 px-24 py-10 bg-[#0F0E28] h-full flex items-center justify-center flex-col">
+    <div class="space-y-6 text-center ">
+        <h1 class="text-6xl text-[#f6f4f4] font-semibold w-full leading-snug">Services</h1>
+        <p class="text-[#f6f4f4] font-light MAX-SM:TEXT-CENTER text-justify my-10 w-full leading-relaxed">At Hooman Digital, we offer a range of services to help you achieve your digital goals. Our services include:</p>
+    </div>
+    <ServiceList services={services}/>
+</section>

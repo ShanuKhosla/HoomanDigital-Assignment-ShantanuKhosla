@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import {getCollection} from "astro:content";
+import NewsList from "./NewsList.astro";
+const latestnews = await getCollection("latestnews");
+---
+
+<section class="flex max-sm:px-4 px-20 bg-[#09071a] py-10 flex-col">
+    <div class="flex flex-row max-sm:flex-col max-sm:px-4  md:items-center justify-between mb-6">
+        <h1 class="text-5xl my-5 md:text-6xl text-[#f6f4f4] font-semibold w-full leading-snug">Our Latest News</h1>
+        <button class="px-5 w-[150px] py-3 rounded-sm hover:bg-[#fac94c] transition ease-linear duration-500 bg-[#FFD469] text-black">
+            View More
+        </button> 
+    </div>
+    <div class="flex flex-row max-sm:items-start max-sm:flex-col max-sm:px-4 px-10">
+        <Image 
+        src="/news1.png"
+        width={670}
+        height={450}
+        alt="news1"
+        class="rounded-md"
+        />
+        <div class="md:mx-5 max-sm:my-5 flex items-start flex-col h-full w-full gap-4 text-[#f6f4f4]">
+            <div class="flex flex-row items-center justify-between gap-4">
+                <p class="font-extrabold">DEVELOPMENT</p>
+                <p>23 September 2023</p>
+            </div>
+            <h1 class="text-3xl w-full font-semibold">How to make a website look more attractive with Illustrations</h1>
+            <p class="w-full mb-40 text-justify">Use illustrations purposefully: Illustrations should serve a purpose and enhance the website's content. Don't add illustrations just for the sake of it; ensure they are relevant and add value to the user's experience. Animations can add interactivity and interest to the design.</p>
+            <div class="flex-end flex flex-row items-center justify-between w-full">
+                <p class="text-lg font-extrabold underline-offset-8 underline hover:text-[#FFD469] hover:underline hover:decoration-offset-8 cursor-pointer text-[#3eb8ff]">Read More</p>
+                <div class="flex flex-row items-center justify-between gap-3">
+                    <Image 
+                    src="/thumbsup.png"
+                    width={24}
+                    height={24}
+                    alt="like"
+                    /> 
+                    
+                    <Image 
+                    src="/mode_comment.png"
+                    width={24}
+                    height={24}
+                    alt="comment"
+                    />
+                    
+                    <Image 
+                    src="/share.png"
+                    width={24}
+                    height={24}
+                    alt="share"
+                    />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <NewsList latestnews={latestnews} />
+
+
+</section>
+

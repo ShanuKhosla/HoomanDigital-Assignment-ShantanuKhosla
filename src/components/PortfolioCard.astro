@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+import {getEntryBySlug, type CollectionEntry} from 'astro:content';
+
+type Props = {
+    portfolio: CollectionEntry<'portfolio'>;
+}
+
+const {portfolio} = Astro.props;
+
+---
+
+<div class="bg-[#09071a]  p-8 rounded-xl flex items-center justify-between space-y-6 flex-col cursor-pointer">
+    <Image 
+    src={portfolio.data.images}
+    width={1000}
+    height={1000}
+    alt="portfolio Image"
+    class="rounded-lg"
+    />
+    <h1 class="text-[#f6f4f4] text-2xl font-bold">{portfolio.data.title}</h1>
+    <p class="text-lg text-[#f6f4f4]">{portfolio.data.desc}</p>
+</div>

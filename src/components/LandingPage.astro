@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<section class="h-full bg-[#0F0D23] w-full  flex justify-between shadow-2xl py-16">
+<div class="max-sm:pl-4 pl-16 py-24">
+    <h1 class="max-sm:text-3xl text-5xl text-[#f6f4f4] font-semibold w-full leading-snug ">
+        Grow Your Business and Unique 
+        Design with <span class="text-[#FFD469]">Hooman Digital</span>  
+    </h1>
+    <p class="text-[#f6f4f4] font-light text-justify my-10 w-[85%] leading-relaxed">We strongly believe in user-centric service, we have successfully built a significant space in the market.
+        And our motto is to fulfill customer desmand by making them satisfied with growing their business
+    </p>
+    <button class="flex items-center justify-center gap-5 px-6 py-3 rounded-sm hover:bg-[#fac94c] transition ease-linear duration-500 bg-[#FFD469] text-black">
+        Get Started
+        <Image 
+        src="/Vector.png"
+        width={10}
+        height={10}
+        alt="arrow"
+        class="h-full"
+        />
+    </button>
+</div>
+        <Image 
+        src="/background.png"
+        height={857}
+        width={727}
+        alt="heroImage"
+        class="max-sm:hidden"
+        />
+</section>

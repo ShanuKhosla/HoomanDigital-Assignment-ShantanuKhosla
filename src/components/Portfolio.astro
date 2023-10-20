@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import {getCollection} from "astro:content";
+import PortfolioList from "./PortfolioList.astro";
+const portfolios = await getCollection("portfolios");
+
+---
+
+<section class="max-sm:px-8 px-24 py-10 bg-[#0F0D23] h-full flex items-center max-sm:items-start justify-center flex-col">
+   <div class="flex max-sm:flex-col flex-row items-center md:space-x-10">
+    <h1 class="text-6xl text-[#f6f4f4] font-semibold w-full leading-snug flex-1">Our <br />Portfolio</h1>
+    <p class="text-[#f6f4f4] font-light text-justify my-10 w-full leading-relaxed">At Hooman Digital, we're proud of the work we've done for our clients. Our portfolio showcases some of our recent projects, highlighting our expertise in web3 industry and how we've helped other clients succeed. From designing immersive user experiences to building communities around new products, we have tackled a wide range of challenges & achieved great results. Explore our portfolio to see how we have helped other clients achieve their digital goals. When you're ready to start your own project, contact us to schedule a consultation with our team.</p>
+</div>
+   <PortfolioList portfolios={portfolios} />
+   <PortfolioList portfolios={portfolios} />
+</section> 

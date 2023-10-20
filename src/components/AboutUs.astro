@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<section class="max-sm:flex-col-reverse max-sm:px-9 max-sm:py-4 px-24 py-10 bg-[#0F0D23] h-full flex items-center justify-center ">
+   <div class="space-y-6">
+    <h1 class="text-6xl my-3 text-[#f6f4f4] font-semibold w-full leading-snug ">About Us</h1>
+    <p class="text-[#f6f4f4] font-light text-justify my-10 max-sm:w-full  w-[85%] leading-relaxed">At Hooman Digital, we're more than just a team of digital experts. We're a group of individuals who are passionate about using our skills and expertise to help others succeed. Our team is made up of designers, developers, writers, marketers, and community builders, each with a unique perspective and set of skills. We're committed to creating digital solutions that are authentic, innovative, immersive, and intuitive. Whether we're designing a new website, developing a brand identity.</p>
+    <button class="flex items-center justify-center gap-5 px-6 py-3 rounded-sm hover:bg-[#fac94c] transition ease-linear duration-500 bg-[#FFD469] text-black">
+        Get Started
+        <Image 
+        src="/Vector.png"
+        width={10}
+        height={10}
+        alt="arrow"
+        class="h-full "
+        />
+    </button> 
+</div>
+   <Image 
+   src="/about.png"
+   width={400}
+   height={500}
+   alt="aboutimage"
+   class="rounded-lg"
+
+   />
+</section>

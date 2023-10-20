@@ -1,0 +1,26 @@
+---
+import AboutUs from '../components/AboutUs.astro';
+import CTA from '../components/CTA.astro';
+import LandingPage from '../components/LandingPage.astro';
+import News from '../components/News.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Services from '../components/Services.astro';
+import Layout from '../layouts/Layout.astro';// Supports weights 300-700
+import '@fontsource-variable/space-grotesk';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="">		
+		<LandingPage />
+		<AboutUs/>
+		<Services />
+		<CTA />
+		<Portfolio />
+		<News />
+	</main>
+</Layout>
+<style is:global>
+body {
+  font-family: 'Space Grotesk Variable', sans-serif;
+}
+</style>

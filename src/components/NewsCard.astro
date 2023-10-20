@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+
+import {getEntryBySlug, type CollectionEntry} from 'astro:content';
+
+type Props = {
+    latestnew: CollectionEntry<'latestnew'>;
+}
+
+const {latestnew} = Astro.props;
+---
+
+<div class="flex flex-col px-3">
+    <Image 
+    src={latestnew.data.image}
+    width={670}
+    height={450}
+    alt="news1"
+    class="rounded-sm"
+    />
+    <div class="flex my-8 items-start flex-col h-full w-fit gap-4 text-[#f6f4f4]">
+        <div class="flex flex-row items-center justify-between gap-4">
+            <p class="font-extrabold">DEVELOPMENT</p>
+            <p>23 September 2023</p>
+        </div>
+        <h1 class="text-2xl w-full my-4 font-semibold">{latestnew.data.title}</h1>
+        <p class="w-full text-justify">{latestnew.data.description}</p>
+        <p class="text-lg font-extrabold underline-offset-8 underline hover:text-[#FFD469] hover:underline hover:decoration-offset-8 cursor-pointer text-[#3eb8ff]">Read More</p>
+    </div>
+
+</div>

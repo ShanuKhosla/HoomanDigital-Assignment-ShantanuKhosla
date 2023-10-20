@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<section class="bg-[#0F0D23] w-full h-full flex flex-col max-sm:px-4 px-24 pt-16 pb-2 text-[#f6f4f4]">
+    <div class="flex flex-row max-sm:flex-col w-full items-center justify-evenly">
+        <div class="w-full">
+            <Image 
+        src="/logo.png"
+        height={80}
+        width={120}
+        alt="hoomanLogo"
+        class="object-contain"
+        />
+
+        <p class=" w-full md:w-1/2 my-5">At Hooman Digital, we're more than just a team of digital experts. We're a group of individuals.</p>
+        </div>
+        <div class="flex max-sm:flex-col justify-evenly max-sm:gap3 md:gap-40 w-full">
+            <div class="w-full flex flex-col gap-1">
+                <h1 class="font-extrabold text-xl my-3">Company</h1>
+                <p>Hire Team</p>
+                <p>Jobs</p>
+                <p>Brochure</p>
+                <p>FAQ's</p>
+                <p>Blog</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="w-full flex flex-col gap-1">
+                <h1 class="font-extrabold text-xl my-3">Services</h1>
+                <p>UI/UX Design</p>
+                <p>Web Development</p>
+                <p>Content Writing</p>
+                <p>Partnerships</p>
+                <p>Community</p>
+            </div>
+            <div class="w-full flex flex-col gap-1">
+                <h1 class="font-extrabold text-xl my-3">Start a Converstaion</h1>
+                <p>hello@hoomandigital.com</p>
+                <p>+91 123-456-0123</p>
+                <p>+91 123-456-0124</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-row items-center justify-between w-full mt-10 pb-4">
+        <p>Copyright © 2023. All Rights Reserved.</p>
+        <div class="flex flex-row items-center justify-between gap-3"> 
+            <Image 
+    src="/x.png"
+    height={10}
+    width={10}
+    alt="socials"
+    class="object-contain"
+    />
+    <Image 
+    src="/fb.png"
+    height={5}
+    width={5}
+    alt="socials"
+    class="object-contain"
+    />
+    <Image 
+    src="/insta.png"
+    height={10}
+    width={10}
+    alt="socials"
+    class="object-contain"
+    />
+    <Image 
+    src="/yt.png"
+    height={10}
+    width={10}
+    alt="socials"
+    class="object-contain"
+    />
+        </div>
+    </div>
+</section>

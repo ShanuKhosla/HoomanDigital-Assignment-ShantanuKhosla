@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<section class="max-sm:px-8 max-sm:py-3 p-24 bg-[#09071a] ">
+    <div class="flex max-sm:flex-col-reverse items-center  justify-between bg-[#dad9f2] rounded-md max-sm:px-4  px-12 py-8">
+    <div class="space-y-6">
+        <h1 class="max-sm:text-4xl text-6xl max-sm:text-center text-[#09071a] font-semibold w-full leading-snug ">Let's make things happen</h1>
+        <p class="max-sm:text-center text-[#09071a] font-semibold text-justify my-10 max-sm:w-full w-[85%] leading-relaxed">No matter what your digital needs are, we have the expertise and experience to help you succeed. Explore our services and portfolio to see how we can help you elevate your digital presence. And when you're ready, contact us to schedule a consultation with our team.</p>
+        <button class="flex items-center max-sm:mx-auto justify-center gap-3 px-5 py-3 rounded-sm transition ease-linear duration-500 hover:bg-[#000000] bg-[#09071a] text-[#dadf92]">
+            Get Started
+            <Image 
+            src="/Vector.png"
+            width={10}
+            height={10}
+            alt="arrow"
+            class="h-full filter invert"
+            />
+        </button> 
+    </div>
+       <Image 
+       src="/cta.png"
+       width={400}
+       height={500}
+       alt="aboutimage"
+              />
+    </div>
+</section>

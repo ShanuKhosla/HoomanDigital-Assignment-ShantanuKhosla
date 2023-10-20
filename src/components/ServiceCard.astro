@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import {getEntryBySlug, type CollectionEntry} from 'astro:content';
+
+type Props = {
+    service: CollectionEntry<'services'>;
+}
+
+const {service} = Astro.props;
+
+---
+
+<div class=" space-y-7 flex items-start justify-between bg-[#09071a] shadow-2xl flex-col border-2 w-fit p-9 rounded-md bg- border-[#505050] "> 
+    <div class="flex items-center justify-between gap-5">
+        <Image
+        src={service.data.image}
+        height={30}
+        width={30}
+        alt="serviceImage"
+        class=""
+        />
+        <h2 class="text-xl font-bold text-[#f6f4f4] ">{service.data.title}</h2>
+    </div>
+    <p class="text-[#f6f4f4] mb-5 text-justify">{service.data.description}</p>
+    <a class="text-xl hover:text-[#FFD469] hover:underline hover:decoration-offset-8 cursor-pointer text-[#f6f4f4]">View More</a>
+</div>

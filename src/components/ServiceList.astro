@@ -1,0 +1,14 @@
+---
+import type {CollectionEntry} from "astro:content";
+import ServiceCard from "./ServiceCard.astro";
+type Props = {
+    services: CollectionEntry<'services'>[];
+};
+
+const {services} = Astro.props;
+
+---
+
+<div class="grid md:grid-cols-3 grid-cols-1 gap-10 my-10">
+    {services.map((service) => <ServiceCard service={service} />)}
+</div>

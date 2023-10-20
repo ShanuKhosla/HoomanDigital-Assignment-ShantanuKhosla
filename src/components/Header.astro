@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+
+---
+
+<header class="flex items-center justify-between bg-[#09071a] shadow-2xl px-2 md:px-16 py-3 fixed top-0 w-full">
+    <Image 
+    src="/logo.png"
+    height={80}
+    width={120}
+    alt="hoomanLogo"
+    class="w-[100] object-contain"
+    />
+    <ul class="flex items-center justify-between gap-6 max-sm:text-xs  text-[#f6f4f4] ">
+        <li><a href="/">Home</a></li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+        <li><a href="/blogs">Blogs</a></li>
+    </ul>
+    <button class="invisible md:visible px-7 hover:bg-purple-200 transition-all ease-linear duration-500  bg-purple-500 py-2 rounded-sm font-semibold z-[9999]">Contact Us</button>
+</header>
+
+<style>
+    header{
+        font-family: 'Space Grotesk Variable', sans-serif;
+    }
+</style>
